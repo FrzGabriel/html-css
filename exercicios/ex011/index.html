@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em html5</title>
+</head>
+<body>
+        <!--carregando imagens conforme o tamanho do dispositivo que será visualizado-->
+    <h1>Imagens dimencionadas</h1>
+    <p>Temte abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminue o tamanho do seu navegador</p>
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"> <!--telas com no máximo 750 pixels, será carregada a imagem "p"-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!--telas com no máximo 1050 pixels, será carregada a imagem "m"-->
+        <img src="imagens/foto-g.png" alt="imagem flexivel"> <!--imagem base a ser trabalhada-->
+    </picture>
+
+    <h1>Reproduzindo áudios</h1>
+    <p>vamos aprender a reproduzir audios em html</p>
+    <audio src="midia/dodopressao.mp3" controls autoplay></audio>
+    <!--pode ser adicionado tanto como da forma acima, como da forma abaixo-->
+    <p>também existe dessa forma</p>
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/dodopressao.mp3" type="audio/mpeg">
+        <source src="midia/dodopressao.mp3" type="audio/ogg">
+        <source src="midia/dodopressao.mp3" type="audio/wav">
+        <p>infelizmente seu navegador não consegue reproduzir áudio.
+            <a href="midia/dodopressao.mp3"> clique aqui para baixar o arquivo mp3</a></p>            
+    </audio>
+
+    
+
+</body>
+</html>
